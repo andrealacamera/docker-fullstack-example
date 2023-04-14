@@ -19,6 +19,7 @@ server.use(express.json()); //json requests
 // generic middleware 
 server.use( (req,res,next) => {
   const now = new Date().toJSON();
+  console.log(`APP_PORT is ${process.env.APP_PORT}`)
   console.log(`NOW is ${now}`);
   next();
 })
