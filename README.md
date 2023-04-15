@@ -2,21 +2,24 @@
 
 Basic example with three "main" parts: **backend**, **database**, and **frontend**. 
 ## Backend
-Express server listening on port 3123, implements REST API. Returns json messages.
+Http server listening on port 3213, implements REST API. Returns json messages.
 
 - [GET] `/api/test` (static message)
 
+_WORK IN PROGRESS_
+
 ## Database
 
-Based on MySQL. 1 table, some records... 
+Based on MariaDB. Just one table, some records read by the API  
 
-NOT YET IMPLEMENTED
+
+_WORK IN PROGRESS_
 ## Frontend
 React example that calls the API and shows the results (in some way). 
 
-NOT YET IMPLEMENTED
+_NOT YET IMPLEMENTED_
 
 ---
 created: 2023-04-13
 
-updated: 2023-04-14
+updated: 2023-04-15

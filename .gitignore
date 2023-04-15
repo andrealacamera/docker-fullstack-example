@@ -22,6 +22,8 @@ lerna-debug.log*
 .env.production.local
 .env.local
 
+#password and secrets:
+*passwd
 
 # Next.js build output
 .next

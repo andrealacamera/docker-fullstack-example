@@ -19,7 +19,6 @@ server.use(express.json()); //json requests
 // generic middleware 
 server.use( (req,res,next) => {
   const now = new Date().toJSON();
-  console.log(`APP_PORT is ${process.env.APP_PORT}`)
   console.log(`NOW is ${now}`);
   next();
 })
@@ -27,6 +26,6 @@ server.use( (req,res,next) => {
 // set up ROUTES
 server.use('/api/test/', testR);
 
-http.createServer(server).listen(3213, () => {
-  console.log(`Server HTTP is listening on port ${3213}`)
+http.createServer(server).listen(process.env.APP_PORT, () => {
+  console.log(`Server HTTP is listening on port ${process.env.APP_PORT}`)
 });

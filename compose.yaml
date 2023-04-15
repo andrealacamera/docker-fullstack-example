@@ -1,0 +1,31 @@
+#my first docker compose file
+services:
+  db:
+    image: mariadb:10.7.8-focal
+    restart: always
+    ports:
+      - 3306:3306
+    secrets:
+      - db-passwd
+    volumes:
+      - db-data:/var/lib/mysql/
+    environment:
+      - MARIADB_ROOT_PASSWORD_FILE=/run/secrets/db-passwd
+    
+  adminer:
+    image: adminer:4.8.1-standalone
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - 8080:8080
+    environment:
+      ADMINER_DEFAULT_DB_DRIVER: mysql
+      ADMINER_DEFAULT_DB_HOST: db
+      ADMINER_DESIGN: hydra
+volumes:
+  db-data:      
+      
+secrets:
+  db-passwd: 
+    file: ./database/passwd
