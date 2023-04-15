@@ -1,5 +1,13 @@
 #my first docker compose file
 services:
+  backend:
+    build: 
+      context: ./backend
+    ports:
+      - 3214:3214
+    environment:
+      - APP_PORT=3214
+
   db:
     image: mariadb:10.7.8-focal
     restart: always

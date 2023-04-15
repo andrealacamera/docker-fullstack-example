@@ -24,6 +24,9 @@ server.use( (req,res,next) => {
 })
 
 // set up ROUTES
+server.get('/', (req,res) => {
+  return res.status(201).send(`Please visit /api/test/`)
+})
 server.use('/api/test/', testR);
 
 http.createServer(server).listen(process.env.APP_PORT, () => {

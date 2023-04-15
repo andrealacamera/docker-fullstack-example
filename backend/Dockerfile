@@ -9,9 +9,6 @@ RUN npm install
 COPY . .
 
 
-ARG PORT=3213
-ENV APP_PORT=${PORT}
-EXPOSE $PORT
 
 CMD ["node", "server.js"]
 
