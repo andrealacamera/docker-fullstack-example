@@ -1,12 +1,17 @@
-#my first docker compose file
+#services
 services:
   backend:
     build: 
       context: ./backend
     ports:
       - 3214:3214
+    secrets:
+      - db-passwd
     environment:
       - APP_PORT=3214
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASSWD=/run/secrets/db-passwd
 
   db:
     image: mariadb:10.7.8-focal
@@ -31,9 +36,12 @@ services:
       ADMINER_DEFAULT_DB_DRIVER: mysql
       ADMINER_DEFAULT_DB_HOST: db
       ADMINER_DESIGN: hydra
+
+#volumes
 volumes:
   db-data:      
-      
+
+#secrets      
 secrets:
   db-passwd: 
     file: ./database/passwd
