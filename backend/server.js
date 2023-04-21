@@ -20,7 +20,7 @@ server.use(express.json()); //json requests
 server.use( (req,res,next) => {
   const now = new Date().toJSON();
   console.log(`NOW is ${now}`);
-  console.log(process.env)
+  // console.log(process.env)
   next();
 })
 

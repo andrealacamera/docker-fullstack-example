@@ -29,5 +29,5 @@ const pool = createPool({
   // supportBigNumbers: true
 });
 
-console.log(pool)
+// console.log(pool)
 module.exports = pool;
