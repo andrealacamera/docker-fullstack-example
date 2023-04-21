@@ -7,6 +7,11 @@ services:
       - 3214:3214
     secrets:
       - db-passwd
+    volumes:
+     # Allows changes made to project directory to be accessed by the container and persist.
+      - ./backend:/app
+      # Adds a (anonymous) volume to store node dependencies.
+      - /app/node_modules
     environment:
       - APP_PORT=3214
       - DB_HOST=db
