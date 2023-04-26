@@ -2,7 +2,7 @@
 
 Basic example with three "main" parts: **backend**, **database**, and **frontend**. 
 ## Backend
-Http server listening on port 3213, implements REST API. Returns json messages.
+Http server listening on port 3214, implements REST API. Returns json messages.
 
 - [GET] `/api/test` (static message)
 - [GET] `/api/middle_earth/gondor` (get the Gondor's people)
@@ -23,6 +23,11 @@ React example that calls the API and shows the results (in some way).
 
 Basic example from [this site](https://plainenglish.io/blog/step-by-step-guide-to-dockerize-react-app-created-using-vite)
 
+Added [TailwindCSS](https://tailwindcss.com/docs/guides/vite)
+
+
+
+_WORK IN PROGRESS_
 ---
 created: 2023-04-13
 
