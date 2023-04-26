@@ -10,5 +10,5 @@ COPY . .
 
 
 
-CMD ["node", "server.js"]
+CMD ["npm", "run", "dev"]
 

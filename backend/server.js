@@ -25,7 +25,6 @@ server.use( (req,res,next) => {
 })
 
 // set up ROUTES
-
 server.use('/api/test/', testR);
 server.use('/api/middle_earth/', middleR);
 
