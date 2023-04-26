@@ -21,9 +21,9 @@ _WORK IN PROGRESS_
 ## Frontend
 React example that calls the API and shows the results (in some way). 
 
-_NOT YET IMPLEMENTED_
+Basic example from [this site](https://plainenglish.io/blog/step-by-step-guide-to-dockerize-react-app-created-using-vite)
 
 ---
 created: 2023-04-13
 
-updated: 2023-04-21
+updated: 2023-04-26

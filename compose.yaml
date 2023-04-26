@@ -17,7 +17,15 @@ services:
       - DB_HOST=db
       - DB_USER=root
       - DB_PASSWD=/run/secrets/db-passwd
-
+  frontend: 
+    build: 
+      context: ./frontend
+    ports:
+      - 5173:5173
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    
   db:
     image: mariadb:10.7.8-focal
     restart: always
